@@ -1,0 +1,15 @@
+<div *ngIf="selectedHero">
+    <h2>{{selectedHero.name}} Details</h2>
+    <div><span>id: </span>{{selectedHero.id}}</div>
+    <div>
+        <label>name:
+            <input [(ngModel)]="selectedHero.name" placeholder="name"/>
+        </label>
+    </div>
+    <button (click)="save()">save</button>
+<!--    <div><span>birthdate: </span>{{selectedHero.birthdate  | date:"dd/MM/yy"}}</div>
+    <div><span>strength: </span>{{selectedHero.strength}} (Exponential: {{selectedHero.strength | exponentialStrength:2}})</div>
+    <button (click)="addLike(selectedHero)" [disabled]="selectedHero.likes != null" >Like ({{selectedHero.likes == null ? -1 : selectedHero.likes}})</button>
+-->
+</div>
+<button (click)="goBack()">go back</button>
